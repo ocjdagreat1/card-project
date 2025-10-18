@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import axios from "axios";
-import "./index.css"; // your CSS file
+import "../index.css"; // your CSS file
 
 export default function ServiceSection() {
   const [data, setData] = useState([]);
