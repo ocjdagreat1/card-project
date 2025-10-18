@@ -1,89 +1,72 @@
 .services-wrapper {
   background: #f5f6fa;
-  padding: 70px 4%;
+  padding: 60px 4%;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 60px;
 }
 
-/* Section Titles */
+/* Title */
 .service-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  margin-bottom: 30px;
-  color: #111;
+  margin-bottom: 25px;
+  color: #222;
 }
 
 /* Grid layout */
 .service-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  border-radius: 16px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 10px;
+  border-radius: 12px;
 }
 
-/* Individual card */
+/* Individual cards */
 .service {
   background: #fff;
-  padding: 20px;
+  padding: 25px;
   border-radius: 14px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
 }
 
 .service:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Image styling */
-.service-img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-/* Icons */
 .service i {
-  font-size: 40px;
-  margin-bottom: 12px;
-  transition: transform 0.3s, color 0.3s;
+  font-size: 45px;
+  color: #1976d2;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
 }
+
 .service:hover i {
-  transform: scale(1.1);
+  color: #004d40;
 }
 
-/* Icon colors */
-.icon-blue { color: #1976d2; }
-.icon-orange { color: #f57c00; }
-.icon-purple { color: #8e24aa; }
-.icon-red { color: #d32f2f; }
-.icon-teal { color: #00897b; }
-.icon-green { color: #388e3c; }
+/* Theming for each section */
+.theme-blue {
+  background: #e3f2fd;
+}
+.theme-orange {
+  background: #fff3e0;
+}
+.theme-purple {
+  background: #f3e5f5;
+}
 
-/* Section gradient backgrounds */
-.theme-blue { background: linear-gradient(180deg, #e3f2fd, #ffffff); }
-.theme-orange { background: linear-gradient(180deg, #fff3e0, #ffffff); }
-.theme-purple { background: linear-gradient(180deg, #f3e5f5, #ffffff); }
-.theme-red { background: linear-gradient(180deg, #ffebee, #ffffff); }
-.theme-teal { background: linear-gradient(180deg, #e0f2f1, #ffffff); }
-.theme-green { background: linear-gradient(180deg, #e8f5e9, #ffffff); }
-
-/* Responsive */
+/* Responsive tweaks */
 @media (max-width: 768px) {
   .service-title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
   .service {
-    padding: 15px;
-  }
-  .service-img {
-    height: 140px;
+    padding: 20px;
   }
 }
