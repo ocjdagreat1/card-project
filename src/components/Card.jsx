@@ -13,7 +13,7 @@ export default function ImgMediaCard() {
 
   useEffect(() => {
     axios
-      .get("https://jsonplaceholder.typicode.com/posts?_limit=12")
+      .get("https://jsonplaceholder.typicode.com/posts?_limit=6")
       .then((res) => {
         setData(res.data);
         console.log(res.data);
