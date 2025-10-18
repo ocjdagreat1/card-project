@@ -27,8 +27,9 @@
 /* Individual cards */
 .service {
   background: #fff;
-  padding: 25px;
+  padding: 0; /* remove padding to fit image neatly inside */
   border-radius: 14px;
+  overflow: hidden; /* ensures image corners follow the card’s radius */
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -39,18 +40,44 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* Image inside card */
+.service-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Card content below image */
 .service i {
-  font-size: 45px;
+  font-size: 40px;
   color: #1976d2;
+  margin-top: 15px;
   margin-bottom: 10px;
   transition: color 0.3s ease;
+}
+
+.service h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 10px 0;
+  padding: 0 10px;
+  color: #333;
+}
+
+.service p {
+  font-size: 0.95rem;
+  padding: 0 15px 20px;
+  color: #555;
+  line-height: 1.5;
 }
 
 .service:hover i {
   color: #004d40;
 }
 
-/* Theming for each section */
+/* Section background themes */
 .theme-blue {
   background: #e3f2fd;
 }
@@ -66,7 +93,13 @@
   .service-title {
     font-size: 1.5rem;
   }
-  .service {
-    padding: 20px;
+  .service-img {
+    height: 180px;
+  }
+  .service h3 {
+    font-size: 1rem;
+  }
+  .service p {
+    font-size: 0.9rem;
   }
 }
