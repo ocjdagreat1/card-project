@@ -1,29 +1,76 @@
 
+/* --- Service Section (Refined for Consistency) --- */
 .service-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-   padding: 10px 2%;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 60px 5%;
+  background-color: #f5f6fa; /* matches MUI card section */
+  text-align: center;
+  justify-items: center;
 }
+
+/* --- Each Service Card --- */
 .service {
   background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
 }
 
 .service:hover {
-  transform: translateY(-15px);
-  background-color:orchid;
-  
+  transform: translateY(-10px);
+  background-color: #fdf1ff; /* a soft orchid tint */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* --- Icons --- */
 .service i {
-  font-size: 40px;
-  color:#0d47a1;
-  margin-bottom: 10px;
+  font-size: 42px;
+  color: #0d47a1;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
 }
-.service i:hover{
-  color:#004d40;
+
+.service:hover i {
+  color: #ff5733;
+}
+
+/* --- Headings --- */
+.service h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+/* --- Paragraphs --- */
+.service p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* --- Responsive Behavior --- */
+@media (max-width: 768px) {
+  .service-container {
+    padding: 40px 4%;
+    gap: 20px;
+  }
+
+  .service {
+    max-width: 100%;
+    padding: 25px 15px;
+  }
+
+  .service h3 {
+    font-size: 1.1rem;
+  }
+
+  .service p {
+    font-size: 0.9rem;
+  }
 }
