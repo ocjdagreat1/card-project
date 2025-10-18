@@ -17,7 +17,7 @@ export default function ServiceSection() {
 
     // Fetch API data
     axios
-      .get("https://jsonplaceholder.typicode.com/posts?_limit=9")
+      .get("https://jsonplaceholder.typicode.com/posts?_limit=15")
       .then((res) => setData(res.data))
       .catch((err) => console.error("Error fetching data:", err));
   }, []);
@@ -37,7 +37,7 @@ export default function ServiceSection() {
     <div className="services-wrapper">
       {/* Section 1 — Web Development */}
       <section className="service-container theme-blue" data-aos="fade-up">
-        <h2 className="service-title">Web Development & Tech</h2>
+        <h2 className="service-title">Fullstack Software Development</h2>
         {chunk1.map((item, index) => (
           <div
             key={item.id}
@@ -54,7 +54,7 @@ export default function ServiceSection() {
 
       {/* Section 2 — Data & Analytics */}
       <section className="service-container theme-orange" data-aos="fade-right">
-        <h2 className="service-title">Data & Analytics</h2>
+        <h2 className="service-title">Data  Analysis</h2>
         {chunk2.map((item, index) => (
           <div
             key={item.id}
@@ -71,7 +71,7 @@ export default function ServiceSection() {
 
       {/* Section 3 — Creative Media */}
       <section className="service-container theme-purple" data-aos="fade-left">
-        <h2 className="service-title">Creative Media & Marketing</h2>
+        <h2 className="service-title">Digital  Marketing</h2>
         {chunk3.map((item, index) => (
           <div
             key={item.id}
