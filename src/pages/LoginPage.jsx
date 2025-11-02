@@ -50,7 +50,7 @@ const Login = () => {
     }
 
     console.log("Saved user:", localStorage.getItem("user"));
-    window.location.href = "/Dashboard";
+   navigate("/DashBoard")
   } catch (err) {
     console.error("Login error:", err);
     setError(err?.response?.data?.error || "Login failed");

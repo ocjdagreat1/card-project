@@ -9,8 +9,22 @@ import {
   Button,
 } from "@mui/material";
 import { Facebook, Twitter, Instagram, LinkedIn } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom"; 
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
+
+  const navLinks = [
+    { label: "Home", path: "/DashBoard" },
+    { label: "Users", path: "/users" },
+    { label: "Logout", path: "/" },
+    { label: "Privacy", path: "/privacy" },
+  ];
+
   return (
     <Box
       component="footer"
@@ -24,42 +38,32 @@ const Footer = () => {
         boxShadow: "0 -4px 20px rgba(0, 0, 0, 0.2)",
       }}
     >
-      {/* Brand or Title */}
-      <Typography
-        variant="h5"
-        fontWeight="bold"
-        sx={{ mb: 1, letterSpacing: 1 }}
-      >
+      <Typography variant="h5" fontWeight="bold" sx={{ mb: 1, letterSpacing: 1 }}>
         The New World
       </Typography>
       <Typography variant="body2" sx={{ opacity: 0.8, mb: 3 }}>
-        The discovery that opened the door to exploration, trade, and colonization,linking Europe, Africa, and the Americas for the first time.
+        The discovery that opened the door to exploration, trade, and colonization,
+        linking Europe, Africa, and the Americas for the first time.
       </Typography>
 
-      {/* Navigation Links */}
-      <Stack
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        spacing={3}
-        sx={{ mb: 3 }}
-      >
-        {["Home", "About", "Contact", "Privacy"].map((text) => (
+      {/* ✅ Navigation Links with working navigation */}
+      <Stack direction="row" justifyContent="center" alignItems="center" spacing={3} sx={{ mb: 3 }}>
+        {navLinks.map(({ label, path }) => (
           <Typography
-            key={text}
+            key={label}
             variant="body2"
+            onClick={() => handleNavigation(path)}
             sx={{
               cursor: "pointer",
               fontWeight: 500,
               "&:hover": { textDecoration: "underline", color: "#bbdefb" },
             }}
           >
-            {text}
+            {label}
           </Typography>
         ))}
       </Stack>
 
-      {/* Divider */}
       <Divider
         sx={{
           bgcolor: "rgba(255,255,255,0.3)",
@@ -110,12 +114,7 @@ const Footer = () => {
       </Box>
 
       {/* Social Icons */}
-      <Stack
-        direction="row"
-        justifyContent="center"
-        spacing={2}
-        sx={{ mb: 2 }}
-      >
+      <Stack direction="row" justifyContent="center" spacing={2} sx={{ mb: 2 }}>
         {[Facebook, Twitter, Instagram, LinkedIn].map((Icon, i) => (
           <IconButton
             key={i}
@@ -130,15 +129,11 @@ const Footer = () => {
         ))}
       </Stack>
 
-      {/* Copyright */}
       <Typography variant="body2" sx={{ opacity: 0.8, fontSize: "0.9rem" }}>
-        © {new Date().getFullYear()} The New World. All rights reserved.Built with ❤️ by <b>Opara Chibuike Justine</b>
+        © {new Date().getFullYear()} The New World. All rights reserved. Built with ❤️ by{" "}
+        <b>Opara Chibuike Justine</b>
       </Typography>
- 
- 
-      
     </Box>
-    
   );
 };
 
