@@ -10,9 +10,10 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
-import Footer from "../components/Footer1";
+
+
 
 const RegistrationScreen = () => {
   const navigate = useNavigate();
@@ -194,7 +195,7 @@ const RegistrationScreen = () => {
             }}
           >
             Already have an account?{" "}
-            <a
+            <Link
               href="/"
               style={{
                 color: "#1976d2",
@@ -203,7 +204,7 @@ const RegistrationScreen = () => {
               }}
             >
               Login
-            </a>
+            </Link>
           </Typography>
         </Paper>
       </motion.div>
