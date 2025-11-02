@@ -1,20 +1,29 @@
 
-import Appbar from "./components/Appbar"
-import Hero from "./components/Hero"
-import Card from "./components/Card"
-
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import LoginPage from "./pages/LoginPage"
+import DashBoard from './pages/DashBoard'
+import Registration from './pages/Registration'
+import UsersTable from './pages/UsersTable'
+
+
+
 
 function App() {
-  
-  
 
   return (
-    <>
- <Appbar/>
- <Hero/>
- <Card/>
-    </>
+  <>
+  <Routes>
+<Route path='/' element = {<LoginPage/>}/>
+<Route path='/DashBoard' element = {<DashBoard/>}/>
+<Route path='/Registration' element = {<Registration/>}/>
+<Route path='/users' element = {<UsersTable/>}/>
+
+  </Routes>
+
+  
+  
+  </>
   )
 }
 
