@@ -126,7 +126,7 @@ export default function PrimarySearchAppBar() {
       {user ? (
         <MenuItem onClick={handleLogout}>Log out</MenuItem>
       ) : (
-        <MenuItem component={Link} to="/Login" onClick={handleMenuClose}>
+        <MenuItem component={Link} to="/" onClick={handleMenuClose}>
           Login
         </MenuItem>
       )}

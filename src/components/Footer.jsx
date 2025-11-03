@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import {
   Box,
   Typography,
@@ -25,6 +25,19 @@ const Footer = () => {
     { label: "Privacy", path: "/privacy" },
   ];
 
+const [user, setUser] = React.useState(null); 
+
+  React.useEffect(() => {
+    try {
+      const storedUser = localStorage.getItem("user");
+      if (storedUser && storedUser !== "undefined" && storedUser !== "null") {
+        setUser(JSON.parse(storedUser));
+      }
+    } catch (err) {
+      console.error("Failed to parse user from localStorage:", err);
+    }
+  }, []);
+
   return (
     <Box
       component="footer"
@@ -38,9 +51,15 @@ const Footer = () => {
         boxShadow: "0 -4px 20px rgba(0, 0, 0, 0.2)",
       }}
     >
-      <Typography variant="h5" fontWeight="bold" sx={{ mb: 1, letterSpacing: 1 }}>
-        The New World
-      </Typography>
+<Typography variant="h5" fontWeight="bold" sx={{ mb: 1, letterSpacing: 1 }}>
+  Welcome,{" "}
+  <Box component="span" sx={{ color: "red" }}>
+    {user ? user.firstName || "User" : "Guest"}
+  </Box>{" "}
+  To The New World
+</Typography>
+
+
       <Typography variant="body2" sx={{ opacity: 0.8, mb: 3 }}>
         The discovery that opened the door to exploration, trade, and colonization,
         linking Europe, Africa, and the Americas for the first time.
