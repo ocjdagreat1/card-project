@@ -195,8 +195,7 @@ const RegistrationScreen = () => {
             }}
           >
             Already have an account?{" "}
-            <Link
-              href="/"
+            <Link to="/"
               style={{
                 color: "#1976d2",
                 fontWeight: 600,

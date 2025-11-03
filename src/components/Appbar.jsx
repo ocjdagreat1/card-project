@@ -131,6 +131,10 @@ export default function PrimarySearchAppBar() {
         </MenuItem>
       )}
       <MenuItem component={Link}to ="/users">UsersTable</MenuItem>
+      <MenuItem>{user? `Welcome, ${ user.firstName || "User"}`: "Welcome, Guest"}</MenuItem>
+
+      
+    
     </Menu>
   );
 
