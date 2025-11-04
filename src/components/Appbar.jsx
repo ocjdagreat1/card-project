@@ -130,7 +130,7 @@ export default function PrimarySearchAppBar() {
           Login
         </MenuItem>
       )}
-      <MenuItem component={Link}to ="/users">UsersTable</MenuItem>
+      <MenuItem component={Link}to ="/users">ViewUsers</MenuItem>
       <MenuItem>{user? `Welcome, ${ user.firstName || "User"}`: "Welcome, Guest"}</MenuItem>
 
       
