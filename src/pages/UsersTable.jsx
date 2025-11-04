@@ -46,7 +46,7 @@ const UsersList = () => {
 
     try {
       await axios.delete(
-        `https://fullstack-student-backend.onrender.com/api/auth/delete/${_id}`
+        `https://students-learning-api.onrender.com/api/auth/delete/${_id}`
       );
       setUsers(users.filter((user) => user._id !== _id));
     } catch (error) {
