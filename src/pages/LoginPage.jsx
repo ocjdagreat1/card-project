@@ -33,7 +33,7 @@ const Login = () => {
 
   try {
     const res = await axios.post(
-      `${import.meta.env.VITE_FRONTEND_URL}/api/auth/login`,
+      `${import.meta.env.VITE_FRONTEND_URL}/login`,
       payload
     );
 
