@@ -30,14 +30,7 @@ const RegistrationScreen = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const formData = {
-    firstName,
-    lastName,
-    email,
-    password,
-    phoneNumber,
-    address,
-  };
+  const formData = {firstName, lastName, email,password,phoneNumber, address,};
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -45,7 +38,7 @@ const RegistrationScreen = () => {
     setError("");
 
     try {
-      const { data } = await axios.post(
+      const  data  = await axios.post(
         "https://students-learning-api.onrender.com/api/auth/",
         formData
       );

@@ -181,7 +181,7 @@ const UsersList = () => {
                             variant="contained"
                             color="primary"
                             size="small"
-                            onClick={() => navigate(`/users/edit/${user._id}`)}
+                          onClick={() => navigate(`/users/edit/${user._id}`)}
                             sx={{ minWidth: 70 }}
                           >
                             Edit

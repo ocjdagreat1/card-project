@@ -17,7 +17,7 @@ export default function ServiceSection() {
 
     // Fetch data
     axios
-      .get("https://jsonplaceholder.typicode.com/posts?_limit=9")
+      .get(`${import.meta.env.VITE_BASE_URL}/posts?_limit=9`)
       .then((res) => setData(res.data))
       .catch((err) => console.error("Error fetching data:", err));
   }, []);
