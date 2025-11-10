@@ -39,7 +39,7 @@ const RegistrationScreen = () => {
 
     try {
       const  data  = await axios.post(
-        "https://students-learning-api.onrender.com/api/auth/",
+        `${import.meta.env.VITE_FRONTEND_URL}/api/auth/`,
         formData
       );
       console.log(data);

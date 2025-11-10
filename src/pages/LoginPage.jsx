@@ -33,7 +33,7 @@ const Login = () => {
 
   try {
     const res = await axios.post(
-      'https://students-learning-api.onrender.com/api/auth/login',
+      `${import.meta.env.VITE_FRONTEND_URL}/api/auth/login`,
       payload
     );
 
