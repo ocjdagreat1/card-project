@@ -29,7 +29,7 @@ const UpdateUser = () => {
     setLoading(true)
     try {
       const res = await 
-      axios.put(`${import.meta.env.VITE_FRONTEND_URL}/api/auth/update/${id}`,payload);
+      axios.put(`${import.meta.env.VITE_API_URL}/api/auth/update/${id}`,payload);
       console.log(res.data);
       setLoading(false)
       navigate('/users')
