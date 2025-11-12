@@ -22,7 +22,7 @@ const UsersList = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const api = "https://students-learning-api.onrender.com/api/auth/";
+  const api =  `${import.meta.env.VITE_FRONTEND_URL}/api/auth/`;
 
   useEffect(() => {
     const getUsers = async () => {
@@ -46,7 +46,7 @@ const UsersList = () => {
 
     try {
       await axios.delete(
-        `https://students-learning-api.onrender.com/api/auth/delete/${_id}`
+        `${import.meta.env.VITE_FRONTEND_URL}/api/auth/delete/${_id}`
       );
       setUsers(users.filter((user) => user._id !== _id));
     } catch (error) {
